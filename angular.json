@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-sda-r01"
+    }
+  },
+  "defaultProject": "ng-sda-r01",
+  "cli": {
+    "analytics": "a55e207e-9956-4615-90c4-f862c6feca22"
+  }
 }
