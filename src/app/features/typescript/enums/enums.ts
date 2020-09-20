@@ -1,0 +1,41 @@
+import { Signal } from './signal';
+import { Role } from './role';
+
+export class DemoEnums {
+
+    // iterate enum
+    public iterateEnum(): void {
+        console.log('iterate enum: ');
+
+        for (const role in Role) {
+            if (isNaN(Number(role))) {
+                console.log(role);
+            }
+        }
+    }
+
+    // iterate keys
+    public iterateEnumKeys(): void {
+        console.log('iterate enum keys: ');
+
+        Object.keys(Role)
+            .filter(key => !isNaN(Number(Role[key])))
+            .forEach(key => console.log(Role[key]));
+    }
+
+    public getKeysOfStringEnum(): void {
+        console.log('iterate keys of string enum: ');
+
+        // get key
+        Object.keys(Signal)
+            .forEach(key => console.log(key));
+    }
+
+    public getValuesOfStringEnum(): void {
+        console.log('iterate values of string enum: ');
+
+        // convert key to value
+        Object.keys(Signal)
+            .map(key => console.log(Signal[key]));
+    }
+}

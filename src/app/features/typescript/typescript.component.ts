@@ -1,3 +1,4 @@
+import { DemoEnums } from './enums/enums';
 import { DemoClasses } from './oop/classes';
 import { DemoSet } from './sets';
 import { DemoMap } from './maps';
@@ -52,9 +53,14 @@ export class TypescriptComponent implements OnInit {
     // const demoSet: DemoSet = new DemoSet();
     // demoSet.testSets();
 
-    const demoClasses: DemoClasses = new DemoClasses();
-    demoClasses.classInstance();
+    // const demoClasses: DemoClasses = new DemoClasses();
+    // demoClasses.classInstance();
 
+    const demoEnums: DemoEnums = new DemoEnums();
+    demoEnums.iterateEnum();
+    demoEnums.iterateEnumKeys();
+    demoEnums.getKeysOfStringEnum();
+    demoEnums.getValuesOfStringEnum();
   }
 
   ngOnInit(): void {

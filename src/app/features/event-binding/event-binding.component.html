@@ -1,0 +1,12 @@
+<h2>Event binding example</h2>
+
+<!-- event binding -->
+<button (click)="onSave($event)">Save</button>
+
+<!-- click count -->
+<p>button was clicked {{ clickCount }} times</p>
+
+<!-- event bubbling -->
+<div (click)="onDivClick()">
+    <button (click)="onSave($event)">Cancel</button>
+</div>

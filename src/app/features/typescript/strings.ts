@@ -1,6 +1,7 @@
 export class DemoStrings {
 
     public templateStrings(): void {
+        // back ticks
         const multiLineString = `
             this
             is

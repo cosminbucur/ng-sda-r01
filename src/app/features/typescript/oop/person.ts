@@ -9,7 +9,6 @@ export class Person implements Human {
         this.lastName = lastName;
     }
 
-
     // short form
     // constructor(firstName: string, lastName: string) {
 
@@ -24,4 +23,7 @@ export class Person implements Human {
     }
 
 
+    private greeting(firstName: string, lastName?: string): string {
+        return firstName + lastName;
+    }
 }
