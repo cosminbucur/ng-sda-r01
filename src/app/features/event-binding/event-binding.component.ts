@@ -14,7 +14,6 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   public onSave($event): void {
     console.log('save button clicked', $event);
     this.clickCount++;

@@ -9,6 +9,7 @@ export class CustomPipesComponent implements OnInit {
 
   public myNumber = 3;
   public message = 'angular is easy!';
+  object: object = {foo: 'bar', baz: 'qux', nested: {xyz: 3, numbers: [1, 2, 3, 4, 5]}};
 
   constructor() { }
 

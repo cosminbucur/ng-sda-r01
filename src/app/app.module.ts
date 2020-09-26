@@ -1,6 +1,5 @@
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +10,11 @@ import { EventBindingComponent } from './features/event-binding/event-binding.co
 import { BuiltInDirectivesComponent } from './features/built-in-directives/built-in-directives.component';
 import { CustomPipesComponent } from './features/custom-pipes/custom-pipes.component';
 import { ZeroPaddingPipe } from './shared/pipes/zero-padding.pipe';
+import { TemplateDrivenComponent } from './features/forms/template-driven/template-driven.component';
+import { ModelDrivenComponent } from './features/forms/model-driven/model-driven.component';
+import { ComponentInteractionComponent } from './features/component-interaction/component-interaction.component';
+import { ParentComponent } from './features/component-interaction/parent/parent.component';
+import { ChildComponent } from './features/component-interaction/parent/child/child.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,17 @@ import { ZeroPaddingPipe } from './shared/pipes/zero-padding.pipe';
     EventBindingComponent,
     BuiltInDirectivesComponent,
     CustomPipesComponent,
-
-    ZeroPaddingPipe
+    ZeroPaddingPipe,
+    TemplateDrivenComponent,
+    ModelDrivenComponent,
+    ComponentInteractionComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

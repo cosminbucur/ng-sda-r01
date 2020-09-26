@@ -1,6 +1,6 @@
-# ng-sda
+## ng-sda
 
-## 1. Setup environment
+# 1. Setup environment
 
 ### node
 
@@ -35,7 +35,7 @@ ide for angular
 - Path Intellisense
 - npm
 - GitLens
-- Angular 8 snippets
+- Angular 10 snippets
 - Material Icon Theme
 - Todo Tree
 - Todo Highlight
@@ -57,10 +57,23 @@ ide for angular
   
   open terminal:        `CTRL + ~`
 
+  format code:          `CTRL + SHIFT + I`
+
   start server:         `ng serve`
   
   stop server:          `CTRL + C` > yes
-  
+
+4. troubleshooting
+- powershell default
+
+      view > command palette (ctrl + shift + p)
+      search "shell"
+      set default shell: cmd
+
+- run ng commands in vscode terminal
+
+      start > vscode > right click > run as administrator
+
 ### postman
 
 create HTTP requests (simulate browser behavior)
@@ -73,7 +86,7 @@ chrome extension for angular apps
 
 <https://augury.rangle.io/>
 
-## 2. Typescript
+# 2. Typescript
 
 __objective__: use all typescript features
 
@@ -103,7 +116,7 @@ __objective__: use all typescript features
 - promises
 - modules
   
-## 3. Angular
+# 3. Angular
 
 ### folder structure
 
@@ -136,6 +149,8 @@ environments
 *angular.json*
 
 *package.json*
+
+___
 
 ### modules
 
@@ -194,13 +209,20 @@ __objective__: setup a scalable folder structure using angular CLI
   ]
   ```
 
+---
+
 ### architecting with components
 
 __objective__: learn to split an application in components
 
+---
+
 ### templates and styles
 
 __objective__: learn how template and styles are kept separate from the typescript code
+
+
+---
 
 ### data binding
 
@@ -218,7 +240,9 @@ __objective__: learn to bind the html to typescript
   > `ng g c event-binding`
 
 - two way binding (forms) [( )]
-  
+
+---
+
 ### directives
 
 __objective__: use built-in directives
@@ -242,6 +266,8 @@ __objective__: use built-in directives
   > cd src/app/features
   > `ng g c custom-directives`
 
+---
+
 ### reactive programming with rxjs
 
 - observables - a new primitive type which acts as a blueprint for how we want to create streams, subscribe to them, react to new values, and combine streams together to build new ones
@@ -253,6 +279,8 @@ __objective__: use built-in directives
 
 - operators
 <http://reactivex.io/documentation/operators.html>
+
+---
 
 ### pipes
 
@@ -267,6 +295,8 @@ __objective__: learn to create custom pipes
 
   > cd src/app/shared/pipes
   > `ng g c custom-pipes`
+
+---
 
 ### forms
 
@@ -299,6 +329,8 @@ __objective__: learn to create and validate template and model driven forms
 - model driven (reactive)
   > `ng g c model-driven`
 
+---
+
 ### component communication
 
 __objective__: learn how component communicate
@@ -309,6 +341,8 @@ __objective__: learn how component communicate
   > `ng g c parent`
   > cd src/app/features/component-interaction/parent
   > `ng g c child`
+
+---
 
 ### notifications
 
@@ -345,6 +379,8 @@ __objective__: display notifications to user
     this.toastr.success('This is a successful operation', 'Success');
   }
   ```
+
+---
 
 ### http
 
@@ -392,6 +428,8 @@ __objective__: display notifications to user
     delete        DELETE  /users/{id}
     ```
 
+---
+
 ### routing
 
 __objective__: enable routing in the application
@@ -421,6 +459,8 @@ __objective__: extract route names in a file for easy rename
   };
   ```
 
+---
+
 ### environment
 
 __objective__: define reusable properties
@@ -439,6 +479,8 @@ __objective__: define reusable properties
 2. in __environment.ts__
 
   > change type of environment to EnvironmentMap
+
+---
 
 ### material
 
@@ -505,11 +547,13 @@ __objective__: learn material design concepts
   
   > read <https://material.io/design/>
 
+---
+
 ### drag and drop
 
   > `npm install @angular/cdk`
 
-## 4. CRUD
+# 4. CRUD
 
 __objective__: putting it all together
 

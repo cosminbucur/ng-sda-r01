@@ -1,6 +1,8 @@
 import { SharedModule } from './../shared/shared.module';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -8,7 +10,9 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    BrowserModule,
+    BrowserAnimationsModule
   ]
 })
 export class CoreModule {

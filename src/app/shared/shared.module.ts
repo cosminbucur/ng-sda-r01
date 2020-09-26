@@ -1,6 +1,8 @@
+import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyDirectiveDirective } from './my-directive.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -8,10 +10,16 @@ import { MyDirectiveDirective } from './my-directive.directive';
     MyDirectiveDirective,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
   exports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,64 @@
+<form novalidate #f="ngForm" (ngSubmit)="onSubmit()">
+
+    <fieldset>
+        <!-- first name -->
+        <div>
+            <label for="">First name</label>
+            <input type="text" name="firstName" ngModel>
+        </div>
+        
+        <!-- last name -->
+        <div>
+            <label for="">Last name</label>
+            <input type="text" name="lastName" ngModel>
+        </div>
+    </fieldset>
+
+    <!-- email -->
+    <div class="form-group">
+        <label>Email</label>
+        <!-- two way binding with the model -->
+        <!-- #email="ngModel" get access to instance of model
+            using a local template reference variable -->
+        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required
+          pattern="[^ @]*@[^ @]*">
+        <div [ngClass]="{ 'invalid-feedback': f.form.controls.email?.invalid && f.form.controls.email?.dirty }">
+          No, you missed this one.</div>
+        <div [ngClass]="{ 'valid-feedback': email.valid && email.dirty }">
+          Success! You've done it.</div>
+        <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+          <p *ngIf="email.errors.required">Email is required</p>
+          <p *ngIf="email.errors.minlength">Email must contain at least the @ character</p>
+        </div>
+      </div>
+
+    <!-- password -->
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password" [(ngModel)]="model.password" required minLength=8>
+    </div>
+
+    <!-- language -->
+    <div>
+        <label for="">Language</label>
+        <select name="language" id="language" ngModel>
+            <option value="">Please select a language</option>
+            <option *ngFor="let language of languages" [value]="language">
+                {{ language }}
+            </option>
+        </select>
+    </div>
+
+    <!-- submit button -->
+    <button type="submit" [disabled]="f.invalid">Submit</button>
+</form>
+
+<div>
+    <pre>{{ f.value | json }}</pre>
+
+    <pre>Dirty? {{ f.form.controls.email?.dirty }}</pre>
+    <pre>Pristine? {{ f.form.controls.email?.pristine }}</pre>
+    <pre>Touched? {{ f.form.controls.email?.touched }}</pre>
+    <pre>Valid? {{ f.form.controls.email?.valid }}</pre>
+    <pre>Invalid? {{ f.form.controls.email?.invalid }}</pre>
+</div>
