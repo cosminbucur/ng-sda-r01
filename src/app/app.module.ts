@@ -15,6 +15,9 @@ import { ModelDrivenComponent } from './features/forms/model-driven/model-driven
 import { ComponentInteractionComponent } from './features/component-interaction/component-interaction.component';
 import { ParentComponent } from './features/component-interaction/parent/parent.component';
 import { ChildComponent } from './features/component-interaction/parent/child/child.component';
+import { NotificationsComponent } from './features/notifications/notifications.component';
+import { CrudComponent } from './features/crud/crud.component';
+import { ListUserComponent } from './features/crud/list-user/list-user.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { ChildComponent } from './features/component-interaction/parent/child/ch
     ModelDrivenComponent,
     ComponentInteractionComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    NotificationsComponent,
+    CrudComponent,
+    ListUserComponent
   ],
   imports: [
     AppRoutingModule,

@@ -16,9 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule
   ],
   exports: [
+    // angular modules
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+
+    // 3rd party modules
     MaterialModule
   ]
 })

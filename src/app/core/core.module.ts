@@ -1,18 +1,33 @@
+import { UsersService } from './services/users.service';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    // components
+  ],
   imports: [
+    // modules
     CommonModule,
-    SharedModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule,
+    HttpClientModule,
+    // ToastrModule.forRoot({
+    //   timeOut: 2000,
+    //   preventDuplicates: true
+    // })
+  ],
+  providers: [
+    // custom services
+    UsersService
   ]
 })
 export class CoreModule {

@@ -1,19 +1,50 @@
 <h1>NG SDA COURSE</h1>
 
-<!-- add typescript component to html -->
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span>ng project</span>
+        <nav>
+            <ul>
+                <li>
+                    <button mat-raised-button>HOME</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.TYPESCRIPT]">Typescript</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.DATA_BINDING]">Data binding</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.EVENT_BINDING]">Event binding</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.BUILT_IN_DIRECTIVES]">Built-in directives</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.CUSTOM_PIPES]">Custom pipes</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.TEMPLATE_DRIVEN]">Template driven</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.MODEL_DRIVEN]">Model driven</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.COMPONENT_INTERACTION]">Component interaction</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.NOTIFICATIONS]">Notifications</button>
+                </li>
+                <li>
+                    <button mat-raised-button [routerLink]="['/', appRoutesNames.CRUD]">CRUD</button>
+                </li>
+            </ul>
+        </nav>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-<!-- <app-typescript></app-typescript> -->
-
-<!-- <app-data-binding></app-data-binding> -->
-
-<!-- <app-event-binding></app-event-binding> -->
-
-<!-- <app-built-in-directives></app-built-in-directives> -->
-
-<!-- <app-custom-pipes></app-custom-pipes> -->
-
-<!-- <app-template-driven></app-template-driven> -->
-
-<!-- <app-model-driven></app-model-driven> -->
-
-<app-component-interaction></app-component-interaction>
+<article>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</article>
